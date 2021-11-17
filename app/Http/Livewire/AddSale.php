@@ -71,8 +71,8 @@ class AddSale extends Component
             'tax' => Cart::tax(),
             'discount' => Cart::discount(),
             'total' => Cart::total(),
-            'sale_date' => $this->sale_date,
-            'payment' => $this->received_amount > Cart::total() ? Cart::total() : $this->received_amount,
+            'sale_date' => $this->sale_date, 
+            'payment' => $this->received_amount,
         ]);
         $cart = Cart::content();
         foreach($cart as $item){
