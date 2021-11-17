@@ -51,7 +51,7 @@
                 </td>
                 <td>{{$item->total}} TK</td>
                 <td>{{$item->payment}} TK</td>
-                <td>{{$item->payment-$item->total < 0 ? $item->total-$item->payment : $item->payment-$item->total}} TK</td>
+                <td>{{$item->payment-$item->total < 0 ? $item->total-$item->payment : '0'}} TK</td>
                 <td>
                   <div class="dropdown">
                     <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
