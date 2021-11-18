@@ -6,7 +6,7 @@
   <div class="sidebar-brand-icon rotate-n-15">
     <i class="fas fa-laugh-wink"></i>
   </div>
-  <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+  <div class="sidebar-brand-text mx-3"> Admin</div>
 </a>
 
 <!-- Divider -->
@@ -25,7 +25,7 @@
 <!-- Nav Item - Pages Collapse Menu -->
 <li class="nav-item">
   <a class="nav-link {{Request::is('product/*') ? '' : 'collapsed'}}" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-    <i class="fas fa-fw fa-cog"></i>
+    <i class="fa fa-list" aria-hidden="true"></i>
     <span>Product</span>
   </a>
   <div id="collapseTwo" class="collapse {{Request::is('product/*') ? 'collapse show' : ''}}" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -41,7 +41,7 @@
 <!-- Nav Item - Pages Collapse Menu -->
 <li class="nav-item">
   <a class="nav-link {{Request::is('sale/*') ? '' : 'collapsed'}}" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseTwo">
-    <i class="fas fa-fw fa-cog"></i>
+    <i class="fa fa-lightbulb" aria-hidden="true"></i>
     <span>Sale</span>
   </a>
   <div id="collapseThree" class="collapse {{Request::is('sale/*') ? 'collapse show' : ''}}" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -51,6 +51,13 @@
       <a class="collapse-item {{Request::is('sale/list') ? 'active' : ''}}" href="{{ route('salelist') }}">Sale List</a>
     </div>
   </div>
+</li>
+<!-- Nav Item - Pages Collapse Menu -->
+<li class="nav-item">
+  <a class="nav-link {{Request::is('sale/*') ? '' : 'collapsed'}}" href="{{ route('expense') }}">
+  <i class="fas fa-wallet"></i>
+    <span>Expense</span>
+  </a>
 </li>
 
 <!-- Divider -->

@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\SaleProduct;
+use App\Models\ShopExpense;
 use App\Models\ShopSale;
 use Livewire\Component;
 
@@ -16,6 +17,7 @@ class Dashboard extends Component
         $total_paid = ShopSale::sum('payment');
         $total_due = $total_sale-$total_paid;
         $total_profit = SaleProduct::sum('profit');
-        return view('livewire.dashboard', compact('total_sale', 'total_due', 'total_profit'));
+        $total_expense = ShopExpense::sum('cost');
+        return view('livewire.dashboard', compact('total_sale', 'total_due', 'total_profit', 'total_expense'));
     }
 }

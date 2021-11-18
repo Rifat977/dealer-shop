@@ -3,6 +3,7 @@
 use App\Http\Livewire\AddSale;
 use App\Http\Livewire\Category;
 use App\Http\Livewire\Dashboard;
+use App\Http\Livewire\Expense;
 use App\Http\Livewire\Product;
 use App\Http\Livewire\Product\AddProduct;
 use App\Http\Livewire\Sale\ViewSale;
@@ -38,5 +39,8 @@ Route::get('/product/category', Category::class)->name('category')->middleware('
 Route::get('/sale/add', AddSale::class)->name('addsale')->middleware('auth');
 Route::get('/sale/list', SaleList::class)->name('salelist')->middleware('auth');
 Route::get('/sale/{id}', ViewSale::class)->name('viewsale')->middleware('auth');
+
+Route::get('/expense', Expense::class)->name('expense')->middleware('auth');
+
 
 require __DIR__.'/auth.php';
